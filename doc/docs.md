@@ -11,8 +11,8 @@
 * [X] add App  Icon using `flutter pub add flutter_launcher_icons`
 * [X] rename App to --> PomoTasks  using  `flutter pub add rename_app`
 * [X] add App Splash Screen using  `flutter pub add flutter_native_splash`
-* [ ] add Googel Font Packag to inital texts  `flutter pub add google_fonts.`
-* [ ] add Screen Unit to inital size `flutter pub add flutter_screenutil`
+* [X] add Googel Font Packag to inital texts  `flutter pub add google_fonts`
+* [X] add Screen Unit to inital size `flutter pub add flutter_screenutil`
 
 ### [On borading :](ui_preview/onboarding.png)
 
