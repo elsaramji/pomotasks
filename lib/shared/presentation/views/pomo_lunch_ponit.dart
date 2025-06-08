@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:pomotasks/config/routes/go_routes.dart';
+import 'package:pomotasks/config/themes/colors/app_colors.dart';
 
 class PomoLunchPoint extends StatelessWidget {
   const PomoLunchPoint({super.key});
@@ -12,16 +13,12 @@ class PomoLunchPoint extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
+        return MaterialApp.router(
           debugShowCheckedModeBanner: false,
-          home: Scaffold(
-            body: Center(
-              child: Text(
-                'PomoTasks',
-                style: GoogleFonts.lexend(fontSize: 40.sp),
-              ),
-            ),
+          theme: ThemeData(
+            scaffoldBackgroundColor: AppColors.primaryColorBackground,
           ),
+          routerConfig: routerHandeler,
         );
       },
     );
