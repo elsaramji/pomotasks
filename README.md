@@ -1,16 +1,10 @@
-# pomotasks
+# Pomo Taskes 🍅
+![Group 1171275611](https://github.com/user-attachments/assets/3b1439cb-e790-454e-a8b5-e9656eac67f6)
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### A simple pomodoro task manager 
+## Features
+- Pomodoro timer 🍅  : under doing 
+- Add tasks 📝  : under doing 
+- Select tasks to pomodoro 📝🍅  : under doing 
+- Edit tasks 📝  : under doing 
+- Mark tasks as done ✅  : under doing 
