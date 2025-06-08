@@ -34,8 +34,16 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-
+  rename_app: ^1.6.3
+  flutter_native_splash: ^2.4.6
 dev_dependencies:
+    flutter_launcher_icons: "^0.14.3"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon_launcher/pomodoro-technique.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
   flutter_test:
     sdk: flutter
 

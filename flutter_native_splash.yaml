@@ -1,0 +1,22 @@
+flutter_native_splash:
+# defult splash image 
+  # The image parameter allows you to specify an image used in the splash screen.  It must be a
+  # png file and should be sized for 4x pixel density.
+  image: assets/android+12_splash/pomo_splash+12.png
+  color: "#ffffff"
+# Android 12 parameters
+  android_12:
+    # Splash screen image path.
+    image: assets/android+12_splash/pomo_splash+12.png
+    # Splash screen background color.
+    #color: "#42a5f5"
+    # App icon background color.
+    #icon_background_color: "#111111"
+    # The branding property allows you to specify an image used as branding in the splash screen.
+    #branding: assets/dart.png
+    # The image_dark, color_dark, icon_background_color_dark, and branding_dark set values that
+    # apply when the device is in dark mode. If they are not specified, the app will use the
+    # parameters from above.  If there is no parameter above, the app will use the light mode values.
+    #image_dark: assets/android12splash-invert.png
+    #color_dark: "#042a49"
+    #icon_background_color_dark: "#eeeeee"

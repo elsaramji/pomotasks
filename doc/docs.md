@@ -2,15 +2,15 @@
 
 ## Verion
 
-* [ ] 0.0.0 such_as...  FixBug . AddingFutuers .Chanaging Confgrations
+* [X] 0.0.0 such_as...  FixBug . AddingFutuers .Chanaging Confgrations
 
 ### Inital Project and Repos
 
-* [ ] add in GitHup with commit -m  inital project
+* [X] add in GitHup with commit -m  inital project
 * [ ] Overwrite Clean_arcticher in app project folders .
-* [ ] add App  Icon using `flutter pub add flutter_launcher_icons`
-* [ ] rename App to --> PomoTasks  using  `flutter pub add rename_app`
-* [ ] add App Splash Screen using  `flutter pub add flutter_native_splash`
+* [X] add App  Icon using `flutter pub add flutter_launcher_icons`
+* [X] rename App to --> PomoTasks  using  `flutter pub add rename_app`
+* [X] add App Splash Screen using  `flutter pub add flutter_native_splash`
 * [ ] add Googel Font Packag to inital texts  `flutter pub add google_fonts.`
 * [ ] add Screen Unit to inital size `flutter pub add flutter_screenutil`
 
