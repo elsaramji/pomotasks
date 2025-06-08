@@ -7,7 +7,7 @@
 ### Inital Project and Repos
 
 * [X] add in GitHup with commit -m  inital project
-* [ ] Overwrite Clean_arcticher in app project folders .
+* [X] Overwrite Clean_arcticher in app project folders .
 * [X] add App  Icon using `flutter pub add flutter_launcher_icons`
 * [X] rename App to --> PomoTasks  using  `flutter pub add rename_app`
 * [X] add App Splash Screen using  `flutter pub add flutter_native_splash`
