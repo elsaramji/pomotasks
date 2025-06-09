@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pomotasks/config/texts/buttons_texts.dart';
+import 'package:pomotasks/config/texts/normal_texts.dart';
 import 'package:pomotasks/config/themes/colors/app_colors.dart';
 import 'package:pomotasks/config/themes/styles/Buttons/full_width_buttons.dart';
 import 'package:pomotasks/config/themes/styles/texts/app_texts_styles.dart';
 import 'package:pomotasks/core/context/context_exitinion.dart';
+import 'package:pomotasks/futures/onborading/presentation/functions/get_started.dart';
 
 class OnboradingBody extends StatelessWidget {
   const OnboradingBody({super.key});
@@ -16,14 +19,14 @@ class OnboradingBody extends StatelessWidget {
         children: [
           context.spaceVirtical20(),
           Text(
-            "Welcome to PomoTasks",
+            NormalTexts.welcome,
             style: AppTextsStyles.lexendBold28().copyWith(
               color: AppColors.textPrimaryColor,
             ),
           ),
           context.spaceVirtical12(),
           Text(
-            "Boost your productivity with the Pomodoro Technique. Work in focused intervals with short breaks.",
+            NormalTexts.description,
             style: AppTextsStyles.lexendRegular16().copyWith(
               color: AppColors.textPrimaryColor,
             ),
@@ -31,10 +34,12 @@ class OnboradingBody extends StatelessWidget {
           ),
           context.setSpaceVirtical(289),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              getStarted(context);
+            },
             child: Center(
               child: Text(
-                "Get Started",
+                ButtonsTexts.getStarted,
                 style: AppTextsStyles.lexendBold16().copyWith(
                   color: AppColors.textPrimaryColor,
                 ),
