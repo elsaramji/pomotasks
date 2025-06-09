@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pomotasks/config/texts/buttons_texts.dart';
 import 'package:pomotasks/config/texts/normal_texts.dart';
 import 'package:pomotasks/config/themes/colors/app_colors.dart';
-import 'package:pomotasks/config/themes/styles/Buttons/full_width_buttons.dart';
+import 'package:pomotasks/config/themes/styles/Buttons/texts_buttons.dart';
 import 'package:pomotasks/config/themes/styles/texts/app_texts_styles.dart';
 import 'package:pomotasks/core/context/context_exitinion.dart';
 import 'package:pomotasks/futures/onborading/presentation/functions/get_started.dart';
@@ -45,8 +45,7 @@ class OnboradingBody extends StatelessWidget {
                 ),
               ),
             ),
-            style: FullWidthButtonsStyles.fullWidthButtonStyle(
-              context: context,
+            style: AppButtonsStyle.primaryTextButtonStyle(
               overlayColor: AppColors.primaryColor.withAlpha(20),
               backgroundColor: AppColors.primaryColor2,
             ),
