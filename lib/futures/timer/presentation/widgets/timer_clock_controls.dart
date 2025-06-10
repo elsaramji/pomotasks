@@ -4,12 +4,17 @@ import 'package:pomotasks/config/texts/buttons_texts.dart';
 import 'package:pomotasks/config/themes/colors/app_colors.dart';
 import 'package:pomotasks/config/themes/styles/Buttons/texts_buttons.dart';
 import 'package:pomotasks/config/themes/styles/texts/app_texts_styles.dart';
-import 'package:pomotasks/futures/timer/presentation/functions/paues.dart';
-import 'package:pomotasks/futures/timer/presentation/functions/rest.dart';
-import 'package:pomotasks/futures/timer/presentation/functions/start.dart';
 
 class TimerClockControls extends StatelessWidget {
-  const TimerClockControls({super.key});
+  final VoidCallback startTimer;
+  final VoidCallback pauseTimer;
+  final VoidCallback restTimer;
+  const TimerClockControls({
+    required this.startTimer,
+    required this.pauseTimer,
+    required this.restTimer,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +26,7 @@ class TimerClockControls extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               TextButton(
-                onPressed: () {
-                  startTimer();
-                },
+                onPressed: startTimer,
                 child: Text(
                   ButtonsTexts.start,
                   style: AppTextsStyles.lexendBold16(
@@ -36,9 +39,7 @@ class TimerClockControls extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {
-                  pauseTimer();
-                },
+                onPressed: pauseTimer,
                 child: Text(
                   ButtonsTexts.pause,
                   style: AppTextsStyles.lexendBold16(),
@@ -54,9 +55,7 @@ class TimerClockControls extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(vertical: 12.h),
             child: TextButton(
-              onPressed: () {
-                restTimer();
-              },
+              onPressed: restTimer,
               child: Text(
                 ButtonsTexts.reset,
                 style: AppTextsStyles.lexendBold14(),

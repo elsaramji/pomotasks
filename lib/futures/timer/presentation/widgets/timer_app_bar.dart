@@ -7,7 +7,8 @@ import 'package:pomotasks/config/themes/styles/texts/app_texts_styles.dart';
 import 'package:pomotasks/futures/timer/presentation/functions/close.dart';
 
 class TimerAppBar extends StatelessWidget {
-  const TimerAppBar({super.key});
+  final VoidCallback? onClose;
+  const TimerAppBar({super.key, required this.onClose});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class TimerAppBar extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              close();
+              close(context);
             },
             child: Container(
               margin: EdgeInsets.symmetric(vertical: 16.h),
