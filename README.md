@@ -10,8 +10,8 @@
 
 ## Features
 
-- [ ] Onborading🎉
-- [ ] Pomodoro timer 🍅
+- [X] Onborading🎉
+- [X] Pomodoro timer 🍅
 - [ ] Tasks list 📝
 - [ ] Add tasks 📝
 - [ ] Select tasks to pomodoro 📝🍅
@@ -43,4 +43,4 @@ Inital Project and Repos
 
 ### [Timer View:](assets/ui_preview/timer.png)
 
-- [ ] Apply design in [timer view](https://www.figma.com/design/eUciE7IoxerD0hPFjcs8WQ/Working-%F0%9F%A4%B7%E2%80%8D%E2%99%82%EF%B8%8F?node-id=2-2&t=t6CoRFf3bPYlqY7n-1)
+- [X] Apply design in [timer view](https://www.figma.com/design/eUciE7IoxerD0hPFjcs8WQ/Working-%F0%9F%A4%B7%E2%80%8D%E2%99%82%EF%B8%8F?node-id=2-2&t=t6CoRFf3bPYlqY7n-1)
