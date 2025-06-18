@@ -21,38 +21,31 @@ class _TimerClockState extends State<TimerClock> {
   int seconds = ConstantValue.defaultSeconds;
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => TimerCubit(),
-      child: Builder(
-        builder: (context) {
-          return BlocListener<TimerCubit, TimerState>(
-            listener: (context, state) {
-              if (state is TimerChanged) {
-                minutes = state.minutes;
-                seconds = state.seconds;
-                setState(() {});
-              }
-              if (state is TimerReset) {
-                minutes = state.minutes;
-                seconds = state.seconds;
-                setState(() {});
-              }
-            },
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 24.h),
-              child: Column(
-                children: [
-                  TimerItmesViwe(minutes: minutes, seconds: seconds),
-                  TimerClockControls(
-                    startTimer: () => startTimer(context, minutes, seconds),
-                    pauseTimer: () => pauseTimer(context),
-                    restTimer: () => restTimer(context),
-                  ),
-                ],
-              ),
+    return BlocListener<TimerCubit, TimerState>(
+      listener: (context, state) {
+        if (state is TimerChanged) {
+          minutes = state.minutes;
+          seconds = state.seconds;
+          setState(() {});
+        }
+        if (state is TimerReset) {
+          minutes = state.minutes;
+          seconds = state.seconds;
+          setState(() {});
+        }
+      },
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 24.h),
+        child: Column(
+          children: [
+            TimerItmesViwe(minutes: minutes, seconds: seconds),
+            TimerClockControls(
+              startTimer: () => startTimer(context, minutes, seconds),
+              pauseTimer: () => pauseTimer(context),
+              restTimer: () => restTimer(context),
             ),
-          );
-        },
+          ],
+        ),
       ),
     );
   }
