@@ -48,6 +48,8 @@ dependencies:
   rename_app: ^1.6.3
   ## Salomon Bottom Bar Package to manage Bottom Navigation Bar in Pomotasks
   salomon_bottom_bar: ^3.3.2
+  ## Time Package to manage Time in Pomotasks
+  time: ^2.1.5
 ##End My Pomotasks dependencies.
 # Dev dependencies are used to develop the package and are not required for running the app
 dev_dependencies:
