@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pomotasks/core/value/constant_value.dart';
 import 'package:pomotasks/futures/timer/presentation/cubit/timer_cubit.dart';
 import 'package:pomotasks/futures/timer/presentation/functions/paues.dart';
 import 'package:pomotasks/futures/timer/presentation/functions/rest.dart';
@@ -17,36 +16,24 @@ class TimerClock extends StatefulWidget {
 }
 
 class _TimerClockState extends State<TimerClock> {
-  int minutes = ConstantValue.defaultMinutes;
-  int seconds = ConstantValue.defaultSeconds;
   @override
   Widget build(BuildContext context) {
-    return BlocListener<TimerCubit, TimerState>(
-      listener: (context, state) {
-        if (state is TimerChanged) {
-          minutes = state.minutes;
-          seconds = state.seconds;
-          setState(() {});
-        }
-        if (state is TimerReset) {
-          minutes = state.minutes;
-          seconds = state.seconds;
-          setState(() {});
-        }
+    return BlocBuilder<TimerCubit, TimerState>(
+      builder: (context, state) {
+        return Padding(
+          padding: EdgeInsets.symmetric(vertical: 24.h),
+          child: Column(
+            children: [
+              TimerItmesViwe(minutes: state.minutes, seconds: state.seconds),
+              TimerClockControls(
+                startTimer: () => startTimer(context),
+                pauseTimer: () => pauseTimer(context),
+                restTimer: () => restTimer(context),
+              ),
+            ],
+          ),
+        );
       },
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 24.h),
-        child: Column(
-          children: [
-            TimerItmesViwe(minutes: minutes, seconds: seconds),
-            TimerClockControls(
-              startTimer: () => startTimer(context, minutes, seconds),
-              pauseTimer: () => pauseTimer(context),
-              restTimer: () => restTimer(context),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
