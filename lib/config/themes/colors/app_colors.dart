@@ -9,4 +9,5 @@ class AppColors {
   static const Color textPrimaryColor = Color(0xFF171212);
   static const Color boxsPrimaryColor = Color(0xFFF2E8E8);
   static const Color boxsStroke = Color(0xFFF2E8E8);
+  static const Color backgroundTextField = Color(0xFFF5F0F0);
 }
