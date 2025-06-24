@@ -23,7 +23,7 @@ class TasksAppBar extends StatelessWidget {
           IconButton(
             onPressed: () {
               // TODO: Add Task
-              addTask();
+              addTask(context);
             },
             icon: Icon(
               Icons.add,
