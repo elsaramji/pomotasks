@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pomotasks/futures/tasks/presentation/cubit/tasks_data_cubit.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/task_card.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/tasks_app_bar.dart';
@@ -14,6 +15,7 @@ class TasksMainView extends StatefulWidget {
 class _TasksMainViewState extends State<TasksMainView> {
   @override
   Widget build(BuildContext context) {
+    context.read<TasksDataCubit>().futchTasksData();
     return BlocConsumer<TasksDataCubit, TasksDataState>(
       listener: (context, state) {
         if (state is! TasksDataStored) {
@@ -21,7 +23,6 @@ class _TasksMainViewState extends State<TasksMainView> {
         }
       },
       builder: (context, state) {
-        context.read<TasksDataCubit>().futchTasksData();
         return Column(
           children: [
             TasksAppBar(),
@@ -29,8 +30,12 @@ class _TasksMainViewState extends State<TasksMainView> {
               child: CustomScrollView(
                 slivers: [
                   state.tasks.isEmpty
-                      ? const SliverToBoxAdapter(
-                          child: Center(child: Text("Go add some tasks")),
+                      ? SliverFillRemaining(
+                          child: Expanded(
+                            child: Center(
+                              child: Icon(Icons.add_task, size: 72.h),
+                            ),
+                          ),
                         )
                       : SliverList.builder(
                           itemCount: state.tasks.length,
