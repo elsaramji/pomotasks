@@ -52,7 +52,7 @@ class TaskCard extends StatelessWidget {
             onPressed: () {
               // TODO
               task.isDone = !task.isDone;
-              markTaskDone(context, task: task);
+             
             },
             child: Text(
               'Done',
