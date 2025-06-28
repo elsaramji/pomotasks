@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pomotasks/futures/tasks/presentation/cubit/tasks_data_cubit.dart';
+import 'package:pomotasks/futures/tasks/presentation/widgets/add_tasks_order.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/task_card.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/tasks_app_bar.dart';
 
@@ -31,11 +32,7 @@ class _TasksMainViewState extends State<TasksMainView> {
                 slivers: [
                   state.tasks.isEmpty
                       ? SliverFillRemaining(
-                          child: Expanded(
-                            child: Center(
-                              child: Icon(Icons.add_task, size: 72.h),
-                            ),
-                          ),
+                          child: AddTasksOrder(),
                         )
                       : SliverList.builder(
                           itemCount: state.tasks.length,
@@ -51,3 +48,4 @@ class _TasksMainViewState extends State<TasksMainView> {
     );
   }
 }
+
