@@ -4,7 +4,6 @@ import 'package:pomotasks/config/themes/colors/app_colors.dart';
 import 'package:pomotasks/config/themes/styles/Buttons/texts_buttons.dart';
 import 'package:pomotasks/config/themes/styles/texts/app_texts_styles.dart';
 import 'package:pomotasks/futures/tasks/data/task_model.dart';
-import 'package:pomotasks/futures/tasks/presentation/functions/mark_task_done.dart';
 
 class TaskCard extends StatelessWidget {
   final TaskModel task;
