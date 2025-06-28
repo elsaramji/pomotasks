@@ -3,10 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pomotasks/config/themes/colors/app_colors.dart';
 import 'package:pomotasks/config/themes/styles/Buttons/texts_buttons.dart';
 import 'package:pomotasks/config/themes/styles/texts/app_texts_styles.dart';
+import 'package:pomotasks/futures/tasks/data/task_model.dart';
 import 'package:pomotasks/futures/tasks/presentation/functions/mark_task_done.dart';
 
 class TaskCard extends StatelessWidget {
-  const TaskCard({super.key});
+  final TaskModel task;
+
+  const TaskCard({super.key, required this.task});
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +36,11 @@ class TaskCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Task title', style: AppTextsStyles.lexendMedium16()),
+              Text(task.title, style: AppTextsStyles.lexendMedium16()),
               Text(
-                'Task description',
+                task.description.length > 50
+                    ? '${task.description.substring(0, 50)}...'
+                    : task.description,
                 style: AppTextsStyles.lexendRegular16(
                   color: AppColors.primaryColor3,
                 ),
@@ -46,7 +51,8 @@ class TaskCard extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               // TODO
-              markTaskDone();
+              task.isDone = !task.isDone;
+              markTaskDone(context, task: task);
             },
             child: Text(
               'Done',
