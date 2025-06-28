@@ -29,7 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
-## My Pomotasks dependencies
+# My Pomotasks dependencies
   ## Audio Player Package to play Timer Sounds
   audioplayers: ^6.4.0
   ## Flutter Bloc Package to manage state
@@ -50,7 +50,15 @@ dependencies:
   salomon_bottom_bar: ^3.3.2
   ## Time Package to manage Time in Pomotasks
   time: ^2.1.5
-##End My Pomotasks dependencies.
+  ## Hive Package to manage Data in Pomotasks
+  hive: ^2.2.3
+  ## Hive Generator Package to Generate Hive Adapter
+  hive_generator: ^2.0.1
+  ## Hive Flutter Package to use Hive in Flutter
+  hive_flutter: ^1.1.0
+  ## My Pomotasks dependencies.
+  get_it: ^8.0.3
+#End My Pomotasks dependencies.
 # Dev dependencies are used to develop the package and are not required for running the app
 dev_dependencies:
   # Flutter Icons Launcher Plugin to Change App Default Icon to pomodoro technique icon
