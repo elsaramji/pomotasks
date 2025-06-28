@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pomotasks/futures/timer/presentation/functions/close.dart';
 import 'package:pomotasks/futures/timer/presentation/widgets/timer_app_bar.dart';
 import 'package:pomotasks/futures/timer/presentation/widgets/timer_clock.dart';
 
@@ -11,12 +10,7 @@ class TimerView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              TimerAppBar(onClose: () => close(context)),
-              TimerClock(),
-            ],
-          ),
+          child: Column(children: [TimerAppBar(), TimerClock()]),
         ),
       ),
     );

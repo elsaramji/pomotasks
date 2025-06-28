@@ -8,7 +8,8 @@ class PomoTextFormFeild extends StatelessWidget {
   final String? hintText;
   final int maxLines;
   final double? padding;
-  const PomoTextFormFeild({
+
+  PomoTextFormFeild({
     super.key,
     this.controller,
     this.hintText,
