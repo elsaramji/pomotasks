@@ -11,7 +11,7 @@ class TasksDataCubit extends Cubit<TasksDataState> {
   Future<Box> tasks = Hive.openBox('tasks', path: Directory.systemTemp.path);
   Future<Box> tasksDone = Hive.openBox(
     'tasksDone',
-    path: Directory.systemTemp.path,
+    path: "${Directory.systemTemp.path}/tasksDone",
   );
 
   Future<List> data() {
@@ -24,17 +24,19 @@ class TasksDataCubit extends Cubit<TasksDataState> {
   }
 
   addTask({required TaskModel task}) async {
-    emit(TasksDataUpdated());
-    
     await tasks.then((value) => value.put(task.id, task));
+
+    futchTasksData();
   }
 
   addTaskDone({required TaskModel task}) async {
-    tasksDone.then((value) => value.put(task.id, task));
+    deletTaskfromTasks(task: task);
+    await tasksDone.then((value) => value.put(task.id, task));
+    futchTasksData();
   }
 
   deletTaskfromTasks({required TaskModel task}) async {
-    tasks.then((value) => value.delete(task.id));
+    await tasks.then((value) => value.delete(task.id));
   }
 
   celerTasks() async {
