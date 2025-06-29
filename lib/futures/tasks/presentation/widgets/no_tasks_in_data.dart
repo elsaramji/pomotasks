@@ -6,8 +6,8 @@ class NoTasksInData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Center(child: Icon(Icons.add_task, size: 72.h)),
+    return Scaffold(
+      body: Center(child: Icon(Icons.add_task, size: 72.h)),
     );
   }
 }
