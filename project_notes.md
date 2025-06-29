@@ -1,4 +1,3 @@
-
 # **Project Setup and Version Log**
 
 ## **Current Version: `0.0.0`**
@@ -40,12 +39,12 @@ Initial setup and configuration, including:
 
 ### **Task List View**
 
-- ⏳ UI implemented as per design
+- ✅ UI implemented as per design
 - [Figma Design Link](https://www.figma.com/design/eUciE7IoxerD0hPFjcs8WQ/Working-%F0%9F%A4%B7%E2%80%8D%E2%99%82%EF%B8%8F?node-id=10-163&t=nAhMV2PNr61v48N5-1)
 
 ### **Add Task Form**
 
-- ⏳ UI implemented as per design
+- ✅ UI implemented as per design
 - [Figma Design Link](https://www.figma.com/design/eUciE7IoxerD0hPFjcs8WQ/Working-%F0%9F%A4%B7%E2%80%8D%E2%99%82%EF%B8%8F?node-id=10-127&t=NBuCYOTIbzipbE0G-1)
 
 ### **Analytics View**
