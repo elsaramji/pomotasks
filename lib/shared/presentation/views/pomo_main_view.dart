@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pomotasks/config/routes/constant_routes.dart';
+import 'package:pomotasks/core/di/get_it_di.dart';
+import 'package:pomotasks/futures/tasks/presentation/cubit/tasks_data_cubit.dart';
 import 'package:pomotasks/futures/timer/presentation/cubit/timer_cubit.dart';
 import 'package:pomotasks/shared/presentation/values/screens/app_screens_list.dart';
 import 'package:pomotasks/shared/presentation/widgets/pomo_navigation_bar.dart';
@@ -17,8 +19,11 @@ class _PomoMainViewState extends State<PomoMainView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => TimerCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => TimerCubit()),
+        BlocProvider(create: (context) => getIt.get<TasksDataCubit>()),
+      ],
       child: Scaffold(
         bottomNavigationBar: PomoNavigationBar(
           currentIndex: selectedIndex,

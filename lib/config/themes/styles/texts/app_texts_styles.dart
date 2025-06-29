@@ -76,5 +76,15 @@ class AppTextsStyles {
     fontWeight: FontWeight.w400,
     color: color ?? AppColors.textPrimaryColor,
   );
-}
 
+  static TextStyle lexendMedium16({Color? color}) => GoogleFonts.lexend(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    color: color ?? AppColors.textPrimaryColor,
+  );
+  static TextStyle lexendMedium14({Color? color}) => GoogleFonts.lexend(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: color ?? AppColors.textPrimaryColor,
+  );
+}

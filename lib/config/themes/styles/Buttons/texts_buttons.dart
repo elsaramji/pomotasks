@@ -11,7 +11,7 @@ class AppButtonsStyle {
   }) => TextButton.styleFrom(
     backgroundColor: backgroundColor ?? AppColors.primaryColor,
     overlayColor: overlayColor ?? AppColors.primaryColor2.withAlpha(50),
-    minimumSize: Size(width ?? double.infinity, hight ?? 48.h),
+    minimumSize: Size(width ?? 1.sw, hight ?? 48.h),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
   );
 }

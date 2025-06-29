@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 extension ContextExitinion on BuildContext {
-
   // Screen Size...
-  screenWidth() => MediaQuery.of(this).size.width.w;
-  screenHeight() => MediaQuery.of(this).size.height.h;
+  screenWidth() => 1.sw;
+  screenHeight() => 1.sh;
 
   // Virtical Space...
   setSpaceVirtical(double value) => SizedBox(height: value.h);
