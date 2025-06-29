@@ -26,7 +26,7 @@ class _AddTaskFormState extends State<AddTaskForm> {
     return Container(
       height: context.screenHeight() * 0.5,
       width: context.screenWidth(),
-      margin: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+
       color: AppColors.primaryColorBackground,
       child: Container(
         margin: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
@@ -56,12 +56,12 @@ class _AddTaskFormState extends State<AddTaskForm> {
                     ElevatedButton(
                       onPressed: () {
                         // TODO: save Task
-                        formKey.currentState!.save();
-                        saveTask(
-                          context,
-                          taskName: taskNameController.text,
-                          taskDescription: taskDescriptionController.text,
-                        );
+                        if (formKey.currentState!.validate())
+                          saveTask(
+                            context,
+                            taskName: taskNameController.text,
+                            taskDescription: taskDescriptionController.text,
+                          );
                       },
                       child: Text(
                         'Add',
