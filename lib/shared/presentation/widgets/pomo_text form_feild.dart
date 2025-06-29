@@ -8,6 +8,7 @@ class PomoTextFormFeild extends StatelessWidget {
   final String? hintText;
   final int maxLines;
   final double? padding;
+  final String? initialValue;
 
   PomoTextFormFeild({
     super.key,
@@ -15,11 +16,19 @@ class PomoTextFormFeild extends StatelessWidget {
     this.hintText,
     required this.maxLines,
     this.padding,
+    this.initialValue,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: initialValue,
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return 'Please enter some text';
+        }
+        return null;
+      },
       controller: controller,
       minLines: 1,
       maxLines: maxLines,
