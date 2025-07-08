@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pomotasks/futures/tasks/presentation/cubit/tasks_data_cubit.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:pomotasks/core/value/constant_value.dart';
+import 'package:pomotasks/futures/tasks/data/task_model.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/no_tasks_in_data.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/task_card.dart';
 import 'package:pomotasks/futures/tasks/presentation/widgets/tasks_app_bar.dart';
@@ -15,26 +17,23 @@ class TasksMainView extends StatefulWidget {
 class _TasksMainViewState extends State<TasksMainView> {
   @override
   Widget build(BuildContext context) {
-    context.read<TasksDataCubit>().futchTasksData();
-    return BlocConsumer<TasksDataCubit, TasksDataState>(
-      listener: (context, state) {
-        if (state is! TasksDataStored) {
-          context.read<TasksDataCubit>().futchTasksData();
-        }
-      },
-      builder: (context, state) {
+    return ValueListenableBuilder(
+      valueListenable: Hive.box<TaskModel>(
+        ConstantValue.tasksBoxKey,
+      ).listenable(),
+      builder: (BuildContext context, Box<TaskModel> value, Widget? child) {
         return Column(
           children: [
             TasksAppBar(),
             Expanded(
               child: CustomScrollView(
                 slivers: [
-                  state.tasks.isEmpty
+                  value.isEmpty
                       ? SliverFillRemaining(child: NoTasksInData())
                       : SliverList.builder(
-                          itemCount: state.tasks.length,
+                          itemCount: value.length,
                           itemBuilder: (context, index) =>
-                              TaskCard(task: state.tasks[index]),
+                              TaskCard(task: value.getAt(index)!),
                         ),
                 ],
               ),
