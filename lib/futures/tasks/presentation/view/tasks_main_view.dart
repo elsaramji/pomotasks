@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:pomotasks/core/value/constant_value.dart';
 import 'package:pomotasks/futures/tasks/data/task_model.dart';

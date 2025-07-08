@@ -58,6 +58,7 @@ dependencies:
   hive_flutter: ^1.1.0
   ## My Pomotasks dependencies.
   get_it: ^8.0.3
+  path_provider: ^2.1.5
 #End My Pomotasks dependencies.
 # Dev dependencies are used to develop the package and are not required for running the app
 dev_dependencies:
