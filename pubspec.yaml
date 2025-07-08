@@ -58,6 +58,9 @@ dependencies:
   hive_flutter: ^1.1.0
   ## My Pomotasks dependencies.
   get_it: ^8.0.3
+  ## my Pomotasks Chart Package
+  ## to manage Chart in Pomotasks
+  fl_chart: ^1.0.0
 #End My Pomotasks dependencies.
 # Dev dependencies are used to develop the package and are not required for running the app
 dev_dependencies:
