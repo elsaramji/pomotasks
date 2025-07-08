@@ -1,8 +1,10 @@
 import 'package:get_it/get_it.dart';
-import 'package:pomotasks/futures/tasks/presentation/cubit/tasks_data_cubit.dart';
+import 'package:pomotasks/futures/tasks/data/repos/task_done_repo.dart';
+import 'package:pomotasks/futures/tasks/data/repos/tasks_repo.dart';
 
 final getIt = GetIt.instance;
 
 void setupGetIt() {
-  getIt.registerSingleton<TasksDataCubit>(TasksDataCubit());
+  getIt.registerSingleton<TasksRepo>(TasksRepo());
+  getIt.registerSingleton<TaskDoneRepo>(TaskDoneRepo());
 }

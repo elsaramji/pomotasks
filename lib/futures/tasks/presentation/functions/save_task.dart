@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pomotasks/core/di/get_it_di.dart';
+import 'package:pomotasks/futures/tasks/data/repos/tasks_repo.dart';
 import 'package:pomotasks/futures/tasks/data/task_model.dart';
-import 'package:pomotasks/futures/tasks/presentation/cubit/tasks_data_cubit.dart';
 
 saveTask(
   BuildContext context, {
   required String taskName,
   required String taskDescription,
 }) async {
-  context.read<TasksDataCubit>().addTask(
+getIt.get<TasksRepo>().addTask(
     task: TaskModel(
       title: taskName,
       description: taskDescription,

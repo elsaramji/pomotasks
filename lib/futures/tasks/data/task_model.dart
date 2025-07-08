@@ -12,10 +12,13 @@ class TaskModel extends HiveObject {
   bool isDone;
   @HiveField(3)
   String id;
+  @HiveField(4)
+int doneAt;
 
   TaskModel({
     required this.title,
     required this.description,
+    this.doneAt = 0,
     this.isDone = false,
     required this.id,
   });
