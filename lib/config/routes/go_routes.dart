@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:pomotasks/futures/onborading/presentation/views/onborading_view.dart';
+import 'package:pomotasks/features/onborading/presentation/views/onborading_view.dart';
 import 'package:pomotasks/shared/presentation/views/pomo_main_view.dart';
 
 final GoRouter routerHandeler = GoRouter(

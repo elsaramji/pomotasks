@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pomotasks/config/routes/constant_routes.dart';
-import 'package:pomotasks/futures/timer/presentation/cubit/timer_cubit.dart';
+import 'package:pomotasks/features/timer/presentation/cubit/timer_cubit.dart';
 import 'package:pomotasks/shared/presentation/values/screens/app_screens_list.dart';
 import 'package:pomotasks/shared/presentation/widgets/pomo_navigation_bar.dart';
 

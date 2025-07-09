@@ -6,7 +6,6 @@ import 'package:pomotasks/shared/presentation/views/pomo_lunch_ponit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await hiveinit();
   await ScreenUtil.ensureScreenSize();
   setupGetIt();
