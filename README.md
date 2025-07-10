@@ -4,7 +4,17 @@
 
 ---
 
-![PomoTasks Preview](https://github.com/user-attachments/assets/3b1439cb-e790-454e-a8b5-e9656eac67f6)
+![PomoTasks Preview](assets/ui_preview/overview.png)
+
+---
+
+## 🔗 Try It Out
+
+You can try the app from the link below:
+
+👉 **[Live Demo](https://appetize.io/app/b_z5jmfq4mwma7fcjpzjut5fgmaa)**
+
+> 📱 Best viewed on mobile devices
 
 ---
 
@@ -16,14 +26,14 @@ PomoTasks is a minimal and efficient Pomodoro timer and task manager designed to
 
 ## **Key Features**
 
-- ✅ Onboarding Flow 🎉
-- ✅ Pomodoro Timer 🍅
-- ✅ Bottom Navigation Bar
-- ⏳ Task List View 📝
-- ⏳ Add New Tasks 📝
-- ⏳ Assign Tasks to Pomodoro Sessions 📝🍅
-- ⏳ Edit Existing Tasks 📝
-- ⏳ Mark Tasks as Completed ✅
-- ⏳ Overview & Analytics Dashboard 📊
+- ✅ Onboarding Flow 🎉  
+- ✅ Pomodoro Timer 🍅  
+- ✅ Bottom Navigation Bar  
+- ✅ Task List View 📝  
+- ✅ Add New Tasks 📝  
+- ⏳ Assign Tasks to Pomodoro Sessions 📝🍅  
+- ⏳ Edit Existing Tasks 📝  
+- ✅ Mark Tasks as Completed ✅  
+- ✅ Overview & Analytics Dashboard 📊  
 
 ---
